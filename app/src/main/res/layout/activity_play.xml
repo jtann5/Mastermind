@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity">
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"/>
+    <LinearLayout
+        android:id="@+id/PlayRowsLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textSize="30sp"
+            android:textColor="?colorTextPrimary"
+            android:textStyle="bold"
+            android:text="Guesses"
+            />
+        <LinearLayout
+            android:id="@+id/Row0LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="1"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/PegImageButton_0_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"
+                />
+            <Button android:id="@+id/PegImageButton_0_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_0_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_0_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_0_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_0_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_0_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_0_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row1LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="2"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_1_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_1_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_1_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_1_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_1_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_1_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_1_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_1_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row2LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="3"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_2_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_2_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_2_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_2_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_2_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_2_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_2_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_2_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row3LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="4"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_3_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_3_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_3_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_3_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_3_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_3_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_3_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_3_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row4LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="5"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_4_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_4_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_4_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_4_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_4_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_4_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_4_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_4_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row5LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="6"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_5_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_5_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_5_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_5_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_5_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_5_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_5_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_5_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row6LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="7"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_6_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_6_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_6_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_6_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_6_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_6_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_6_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_6_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row7LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/PegText_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="8"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <Button android:id="@+id/PegImageButton_7_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_7_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_7_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <Button android:id="@+id/PegImageButton_7_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkgray"/>
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.7"
+                android:columnCount="2"
+                android:rowCount="2">
+                <View
+                    android:id="@+id/PegResults_7_0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_7_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_7_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+                <View
+                    android:id="@+id/PegResults_7_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_rowSpan="1"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="2.5dp"
+                    android:background="@color/gray" />
+            </GridLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/guess_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Guess" />
+        <Button
+            android:id="@+id/copy_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Copy Row Above" />
+        <Button
+            android:id="@+id/info_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Info" />
+        <Button
+            android:id="@+id/quit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Quit" />
+        <LinearLayout
+            android:id="@+id/cool_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/win_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Automatic Win"
+                android:layout_marginHorizontal="10dp"/>
+            <Button
+                android:id="@+id/lose_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Automatic Lose"
+                android:layout_marginHorizontal="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
