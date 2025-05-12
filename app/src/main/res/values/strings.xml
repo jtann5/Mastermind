@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mastermind</string>
+    <string name="title_activity_options">OptionsActivity</string>
+    <attr name="colorTextPrimary" format="reference|color" />
+</resources>
